@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+  <form>
+    <h3>Calculator</h3>
+    <div style="padding-bottom: 10px">
+      <input type="number" id="num1">
+      <input type="number" id="num2">
+    </div>
+    <button type="button" onclick="Cal('+')">Addition(+)</button>
+    <button type="button" onclick="Cal('-')">Subtraction(-)</button>
+    <button type="button" onclick="Cal('*')">Multiplication(X)</button>
+    <button type="button" onclick="Cal('/')">Division(/)</button>
+    <h3>Result:</h3>
+    <p id="Result"></p>
+  </form>
+  <script>
+    /*
+    function Add() {
+      var number1 = document.getElementById("num1").value;
+      var number2 = document.getElementById("num2").value;
+      var result = Number(number1) + Number(number2);
+      document.getElementById("Result").innerHTML = result;
+    }
+    function Sub() {
+      var number1 = document.getElementById("num1").value;
+      var number2 = document.getElementById("num2").value;
+      var result = Number(number1) - Number(number2);
+      document.getElementById("Result").innerHTML = result;
+    }
+
+    function Mul() {
+      var number1 = document.getElementById("num1").value;
+      var number2 = document.getElementById("num2").value;
+      var result = Number(number1) * Number(number2);
+      document.getElementById("Result").innerHTML = result;
+    }
+    function Div() {
+      var number1 = document.getElementById("num1").value;
+      var number2 = document.getElementById("num2").value;
+      var result = Number(number1) / Number(number2);
+      document.getElementById("Result").innerHTML = result;
+    }
+    */
+    var num1, num2;
+
+    function getNumbers() {
+      num1 = document.getElementById("num1").value;
+      num2 = document.getElementById("num2").value;
+    }
+    function Cal(operation) {
+      getNumbers();
+      var result = eval(num1 + operation + num2);
+      document.getElementById("Result").innerHTML = result;
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+    <p><b>Bài 1:</b> Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</p>
+    <label for="numA">Number A:</label><input type="text" id="numA">
+    <label for="numB">Number B:</label><input type="text" id="numB">
+    <input type="button" value="Check" onclick="checkAdivB()">
+    <p id="result1"></p>
+    <hr>
+
+    <script>
+        function checkAdivB() {
+            let a = parseInt(document.getElementById("numA").value);
+            let b = parseInt(document.getElementById("numB").value);
+            let result = document.getElementById("result1");
+
+            if (isNaN(a) == true || isNaN(b) == true) {
+                result.innerHTML = "<b>Input must be a number!</b>"
+            } else {
+                if (b == 0) {
+                    result.innerHTML = "<b>Number b must be different from 0!</b>";
+                } else if (a % b == 0) {
+                    result.innerHTML = "<b>a is divisible by b.</b>"
+                } else {
+                    result.innerHTML = "<b>a is not divisible by b.</b>"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

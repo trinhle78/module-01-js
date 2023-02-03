@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Ứng dụng good-fast-cheap
+    </title>
+    <style>
+        input {
+            width: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <input id="good" type="range" min="1" max="2" onchange="clickGood()">
+    <label for="good">Good</label><br>
+    <input id="fast" type="range" min="1" max="2" onchange="clickFast()">
+    <label for="fast">Fast</label><br>
+    <input id="cheap" type="range" min="1" max="2" onchange="clickCheap()">
+    <label for="cheap">Cheap</label><br>
+    <script>
+        let good = document.getElementById("good");
+        let fast = document.getElementById("fast");
+        let cheap = document.getElementById("cheap");
+
+        function clickGood() {
+            if (good.value == 2) {
+                if (fast.value == 2) {
+                    cheap.value = 1;
+                }
+            }
+        }
+        function clickFast() {
+            if (fast.value == 2) {
+                if (cheap.value == 2) {
+                    good.value = 1;
+                }
+            }
+        }
+        function clickCheap() {
+            if (cheap.value == 2) {
+                if (good.value == 2) {
+                    fast.value = 1;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

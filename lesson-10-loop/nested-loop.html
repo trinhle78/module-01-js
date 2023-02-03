@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp lồng nhau</title>
+</head>
+<body>
+  <script>
+    //Vòng lặp for
+    /*
+    let sout = "<table style='border: 1px; width: 500px; border-spacing: 0px; padding: 5px;'>"
+    for (let i = 0; i <= 10; i++) {
+      sout = sout + "<tr>";
+      for (let j = 0; j <= 10; j++) {
+        sout += "<td style='border: solid black 1px'>" + i * j + "</td>";
+      }
+      sout += "</tr>";
+    }
+    sout += "</table>";
+    document.write(sout);
+
+     */
+
+    // Vòng lặp while
+    let sout, i, j;
+    sout = "<table style='border: 1px; width: 500px; border-spacing: 0px;'>"
+    i = j=  1;
+    while (i <= 10) {
+      sout  += "<tr>";
+      while (j <= 10) {
+        sout += "<td style='border: solid black 1px; padding: 3px'>" + i * j + "</td>";
+        j++;
+      }
+      sout  += "</tr>";
+      j = 1;
+      i++;
+    }
+    sout += "</table>"
+    document.write(sout);
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+  <script>
+    /* Viết chương trình nhập điểm của một sinh viên cho các môn
+  : Vật lý, Hóa học, và Sinh học. Sau đó hiển thị điểm trung
+  bình và tổng của những điểm này. */
+    var inputVatLy = prompt("Nhập điểm vật lý:");
+    var inputHoaHoc = prompt("Nhập điểm hóa học:");
+    var inputSinhHoc = prompt("Nhập điểm sinh học:");
+
+    var vatly = parseInt(inputVatLy);
+    var hoahoc = parseInt(inputHoaHoc);
+    var sinhhoc = parseInt(inputSinhHoc);
+
+    var tongDiem = vatly + hoahoc + sinhhoc;
+    var diemTrungBinh = tongDiem/3;
+    document.write("Tổng điểm các môn là: " + tongDiem + "<br/>");
+    document.write("Điểm trung bình là: " + diemTrungBinh);
+  </script>
+</body>
+</html>

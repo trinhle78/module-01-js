@@ -1,0 +1,43 @@
+.info {
+    border-bottom: 1px dotted black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 6px 0px;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+form li span label {
+    display: block;
+}
+
+form li span {
+    float: left;
+}
+
+table {
+    border: 1px solid #dedede;
+    border-collapse: collapse;
+}
+caption {
+    text-align: left;
+}
+th {
+    border: 1px solid #dedede;
+}
+td {
+    width: 14.5%;
+    border: 1px solid #dedede;
+    text-align: center;
+    padding: 4px;
+}
